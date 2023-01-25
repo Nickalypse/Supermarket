@@ -1,0 +1,25 @@
+
+(*) Ogni parametro deve essere inserito in una riga distinta
+(*) I parametri con nomi inaspettati o valori non validi vengono ignorati (comprese queste righe)
+(*) La sintassi da seguire è: NOME_PARAMETRO=VALORE_INTERO
+(*) Non deve esserci alcun carattere tra NOME_PARAMETRO ed il carattere '='
+(*) Tutto ciò che è inserito dopo VALORE_PARAMETRO nella stessa riga è ignorato
+(*) Sono ammesse multiple dichiarazioni di NOME_PARAMETRO_X
+(*) in tal caso, verrà letto l'ultimo VALORE_INTERO per NOME_PARAMETRO_X
+(*) L'ordine delle righe quindi non è significativo per NOME_PARAMETRO diversi
+
+K=6			(max #cassieri)
+C=50		(max #clienti)
+E=3			(#clienti che entrano per volta)
+
+T=200		(max tempo per acquisti){>10 ms}[min: 10 ms] //varia da cliente a cliente
+P=100		(max #prodotti acquistati)[min: 0] //varia da cliente a cliente
+
+S1=3		(max #casse tali che |coda|<=1, se raggiunto chiudo cassa)
+S2=10		(#clienti nella stessa coda che se raggiunto fa aprire una nuova cassa)
+
+INTERV=50	(ogni quanto tempo il cassiere comunica al direttore)
+PROD=2		(tempo per gestione singolo prodotto)
+
+CASSE=3		(#casse attive al momento dell'apertura)
+
